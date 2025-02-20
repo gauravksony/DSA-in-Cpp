@@ -139,17 +139,48 @@ void print10(int n){
     }
  void print12(int n){
          for(int i=1;i<=n;i++){
+        // for numbers increasing order
         for(int j=1; j<=i; j++){
            cout<<j;
-        }
+        } 
+        //for space
         for(int j=1; j<=2*(n-i); j++){
            cout<<" ";
         }
+        //for no. in reverse order
         for(int j=i; j>=1; j--){
            cout<<j;
         }
         cout<<endl;
     }
+    }
+    void print13(int n){
+        int num = 1;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+            cout<<num<<" ";
+            num+=1;
+            }
+            cout<<endl;
+        }
+    }
+     void print14(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                char ch = 'A'+(j-1);
+            cout<<ch<<" ";
+            }
+            cout<<endl;
+        }
+    }
+     void print15(int n){
+        for(int i=1; i<=n; i++){
+            for(int j=n; j>=i; j--){
+                char ch = 'A'+(n-j);
+            cout<<ch<<" ";
+            }
+            cout<<endl;
+        }
     }
 int main(){
 int t;
@@ -157,7 +188,7 @@ cin>>t;
 for(int i=0; i<t; i++){
     int n;
     cin>>n;
-  print12(n);
+  print15(n);
 
 }
 }
