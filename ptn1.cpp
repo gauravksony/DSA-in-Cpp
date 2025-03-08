@@ -209,13 +209,33 @@ void print10(int n){
         cout<<endl;
     }
     }
+     void print18(int n){
+        for(int i=1; i<=n; i++){
+            char ch = 'A' + (n-i);
+            for(int j=1; j<=i; j++){  
+                char p = ch + (j-1);
+            cout<<p<<" ";
+            }
+            cout<<endl;
+        }
+    }
+/* or you can also write this code -->
+
+     void print18(int n){
+        for(int i=1; i<=n; i++){
+            for(char j= 'A'+(n-i); j<='A'+(n-1); j++){  
+            cout<<j<<" ";
+            }
+            cout<<endl;
+        }
+    }*/
 int main(){
 int t;
 cin>>t;
 for(int i=0; i<t; i++){
     int n;
     cin>>n;
-  print17(n);
+  print18(n);
 
 }
 }
