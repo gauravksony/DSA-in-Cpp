@@ -199,17 +199,16 @@ void print10(int n){
         char ch;
         for(int j=1; j<=(2*i)-1; j++){
             if(j<=i){
-                ch = 'A'+(j-1);
-                cout<<ch;
+                ch = 'A'+(j-1);   
             }else{
-                ch--;
-                cout<<ch;
+                ch--; 
             }
+            cout<<ch;
         }
         cout<<endl;
     }
     }
-     void print18(int n){
+    void print18(int n){
         for(int i=1; i<=n; i++){
             char ch = 'A' + (n-i);
             for(int j=1; j<=i; j++){  
@@ -229,13 +228,105 @@ void print10(int n){
             cout<<endl;
         }
     }*/
+void print19(int n){
+    for(int i=1; i<=2*n; i++){
+        if(i<=n){
+            //for pattern
+            for(int j=1; j<=n-i+1; j++){
+                cout<<"*";
+            }
+            //for space
+            for(int j=1; j<=2*(i-1); j++){
+                cout<<" ";
+            }
+            //for pattern
+            for(int j=1; j<=n-i+1; j++){
+                cout<<"*";
+            }
+            cout<<endl;
+        }else{
+            //for pattern
+            for(int j=1; j<=i-n; j++){
+                cout<<"*";
+            }
+            //for space
+            for(int j=1; j<=2*(2*n-i); j++){
+                cout<<" ";
+            }
+            //for pattern
+            for(int j=1; j<=i-n; j++){
+                cout<<"*";
+            }
+            cout<<endl;
+        }       
+        }
+    }
+    void print20(int n){
+    for(int i=1; i<=2*n-1; i++){
+        if(i<=n){
+            //for pattern
+            for(int j=1; j<=i; j++){
+                cout<<"*";
+            }
+            //for space
+            for(int j=1; j<=2*(n-i); j++){
+                cout<<" ";
+            }
+            //for pattern
+            for(int j=1; j<=i; j++){
+                cout<<"*";
+            }
+            cout<<endl;
+        }else{
+            //for pattern
+            for(int j=1; j<=2*n-i; j++){
+                cout<<"*";
+            }
+            //for space
+            for(int j=1; j<=2*(i-n); j++){
+                cout<<" ";
+            }
+            //for pattern
+            for(int j=1; j<=2*n-i; j++){
+                cout<<"*";
+            }
+            cout<<endl;
+        }       
+        }
+    }
+    void print21(int n){ //focus on indexing
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                if(i==0 || j==0 || i==n-1 || j==n-1 ){
+                    cout<<"*";
+                }else{
+                    cout<<" ";
+                }
+            }
+            cout<<endl;
+        }}
+
+    void print22(int n){
+        for(int i=0; i<2*n-1; i++){
+            for(int j=0; j<2*n-1; j++){
+                int top = i;
+                int left = j;
+                int right = (2*n-2)-j;
+                int bottom = (2*n-2)-i;
+                cout<< (n-min(min(top,bottom), min(left,right)));
+            }
+            cout<<endl;
+        }
+    }
+
+
 int main(){
 int t;
 cin>>t;
 for(int i=0; i<t; i++){
     int n;
     cin>>n;
-  print18(n);
+  print22(n);
 
 }
 }
